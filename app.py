@@ -9,12 +9,27 @@ from tensorflow.keras.models import load_model
 # Local utility functions
 from utils import predict_classical, predict_lstm
 
+import nltk 
+# Make sure 'nltk' is imported
+
+
 # --- App Configuration ---
 st.set_page_config(page_title="AIML Fake News Detector", layout="wide")
 
 # --- Model Loading (Caching to speed up app) ---
 # Use st.cache_resource for heavy assets like Keras models
 @st.cache_resource
+
+def download_nltk_data():
+    try:
+        nltk.data.find('corpora/stopwords')
+    except nltk.downloader.DownloadError:
+        # Download only if not found (avoids hitting the error)
+        nltk.download('stopwords', quiet=True) 
+
+# Execute the download check
+download_nltk_data()
+
 def load_assets():
     """Loads all models and preprocessors from the 'models' directory."""
     models = {}
