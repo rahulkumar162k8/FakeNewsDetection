@@ -1,9 +1,0 @@
-[global]
-# This setting explicitly enables Git LFS support during deployment
-maxCachedMessageSize = 200
-[server]
-enableCORS = false
-enableXsrfProtection = false
-# This section is the most important for LFS
-[server.git]
-lfs = true
