@@ -24,7 +24,7 @@ def download_nltk_data():
     import nltk 
     
     # List of required NLTK resources
-    required_resources = ['stopwords', 'wordnet'] 
+    required_resources = ['stopwords', 'wordnet', 'punkt'] 
 
     for resource in required_resources:
         try:
