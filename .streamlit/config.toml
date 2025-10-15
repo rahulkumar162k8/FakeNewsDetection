@@ -1,0 +1,8 @@
+[global]
+maxCachedMessageSize = 200
+[server]
+enableCORS = false
+enableXsrfProtection = false
+[server.git]
+# This explicitly tells Streamlit Cloud to download LFS objects
+lfs = true 
