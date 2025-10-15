@@ -1,0 +1,20 @@
+<<<<<<< HEAD
+# requirements.txt
+streamlit
+pandas
+numpy
+scikit-learn
+nltk
+tensorflow
+keras
+=======
+# requirements.txt
+streamlit
+pandas
+numpy
+scikit-learn
+nltk
+tensorflow
+keras
+>>>>>>> 7d4d2e3e66fa11c460251441040bdb763edfdc55
+joblib
