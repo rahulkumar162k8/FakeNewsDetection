@@ -21,13 +21,18 @@ st.set_page_config(page_title="AIML Fake News Detector", layout="wide")
 @st.cache_resource
 
 def download_nltk_data():
-    import nltk # Import inside the function for safety/caching purposes
-    try:
-        # Check if resource exists; raises LookupError if not found
-        nltk.data.find('corpora/stopwords')
-    except LookupError: # <-- CATCH LookupError instead of DownloadError
-        # Download only if not found
-        nltk.download('stopwords', quiet=True) 
+    import nltk 
+    
+    # List of required NLTK resources
+    required_resources = ['stopwords', 'wordnet'] 
+
+    for resource in required_resources:
+        try:
+            # Check if resource exists; raises LookupError if not found
+            nltk.data.find(f'corpora/{resource}')
+        except LookupError:
+            # Download only if not found
+            nltk.download(resource, quiet=True) 
 
 # Execute the download check
 download_nltk_data()
