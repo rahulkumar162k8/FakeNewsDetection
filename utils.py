@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # utils.py
 import re
 import joblib
@@ -55,7 +54,7 @@ def predict_lstm(model, tokenizer, max_len, text_input):
     probability = model.predict(padded_sequence)[0][0]
     prediction = 1 if probability >= 0.5 else 0
 
-=======
+
 # utils.py
 import re
 import joblib
@@ -112,5 +111,5 @@ def predict_lstm(model, tokenizer, max_len, text_input):
     probability = model.predict(padded_sequence)[0][0]
     prediction = 1 if probability >= 0.5 else 0
 
->>>>>>> 7d4d2e3e66fa11c460251441040bdb763edfdc55
+
     return "True News" if prediction == 1 else "Fake News", probability

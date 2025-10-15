@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # app.py
 import streamlit as st
 import os
@@ -113,7 +112,6 @@ if st.button(f"Analyze with {selected_model}", type="primary"):
         st.warning("Please enter a news article text to begin analysis.")
         
 st.markdown("---")
-=======
 # app.py
 import streamlit as st
 import os
@@ -228,5 +226,4 @@ if st.button(f"Analyze with {selected_model}", type="primary"):
         st.warning("Please enter a news article text to begin analysis.")
         
 st.markdown("---")
->>>>>>> 7d4d2e3e66fa11c460251441040bdb763edfdc55
 st.caption("Application deployed on Streamlit.io. Models trained from the provided Jupyter Notebook.")
